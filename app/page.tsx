@@ -72,13 +72,13 @@ export default function Home() {
             <div>
               <DatePicker 
                 date={searchParams.departDate}
-                setDate={(date) => setSearchParams({...searchParams, departDate: date})}
+                setDate={(date: Date | undefined) => setSearchParams({...searchParams, departDate: date || new Date()})}
               />
             </div>
             <div>
               <DatePicker 
                 date={searchParams.returnDate}
-                setDate={(date) => setSearchParams({...searchParams, returnDate: date})}
+                setDate={(date: Date | undefined) => setSearchParams({...searchParams, returnDate: date || new Date()})}
               />
             </div>
             <div>
